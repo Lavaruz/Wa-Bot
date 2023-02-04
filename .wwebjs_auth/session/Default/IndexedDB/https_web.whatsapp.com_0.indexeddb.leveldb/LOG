@@ -1,6 +1,0 @@
-2023/02/04-13:07:11.756 2a48 Reusing MANIFEST C:\Users\assam\Desktop\Wa-Bot\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/02/04-13:07:11.756 2a48 Recovering log #351
-2023/02/04-13:07:12.021 2a48 Reusing old log C:\Users\assam\Desktop\Wa-Bot\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000351.log 
-2023/02/04-13:07:31.007 564 Level-0 table #361: started
-2023/02/04-13:07:31.128 564 Level-0 table #361: 1318242 bytes OK
-2023/02/04-13:07:31.132 564 Delete type=0 #351
