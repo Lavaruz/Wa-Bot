@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const http = require("http");
 const qrcode = require("qrcode-terminal");
 const mongoose = require("mongoose");
 const { Client, RemoteAuth, MessageMedia } = require("whatsapp-web.js");
@@ -27,7 +28,17 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
   });
 
   client.on("authenticated", () => {
-    console.log("authenticated");
+    const port = process.env.PORT || 3001;
+
+    const server = http.createServer((req, res) => {
+      res.statusCode = 200;
+      res.setHeader("Content-Type", "text/plain");
+      res.end("Hello World");
+    });
+
+    server.listen(port, () => {
+      console.log(`Server running at port ${port}`);
+    });
 
     client.on("message", async (message) => {
       if (message.body == "/help") {
