@@ -132,10 +132,6 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
           await chat.sendMessage(text, { mentions });
         }
       }
-
-      if (message.body == "/kick"){
-
-      }
     });
   });
 
