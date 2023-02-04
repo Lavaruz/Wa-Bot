@@ -46,9 +46,9 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
 ==========COMMANDS HELPER==========
 
 **** Group and Non-Group ****
-/stciker
+/sticker
 📖 membuat sticker dari image
-❔ how to use: kirim gambar dan sertakan caption '/stciker'
+❔ how to use: kirim gambar dan sertakan caption '/sticker'
 
 **** Group Only ****
 /groupinfo
@@ -131,6 +131,10 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
 
           await chat.sendMessage(text, { mentions });
         }
+      }
+
+      if (message.body == "/kick"){
+
       }
     });
   });
