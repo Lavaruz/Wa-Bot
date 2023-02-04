@@ -9,6 +9,9 @@ mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGODB_URI).then(() => {
   const store = new MongoStore({ mongoose: mongoose });
   const client = new Client({
+    puppeteer: {
+      args: ["--no-sandbox"],
+    },
     authStrategy: new RemoteAuth({
       store: store,
       backupSyncIntervalMs: 300000,
